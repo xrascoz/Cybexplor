@@ -1,89 +1,66 @@
 import React from 'react'
 import TitleSection from '../../components/TitleSection'
+import Card from "./components/Card"
+
+
 function HowWeWork() {
 
     let TitleObject = {
-        titleSection: "Company",
+        titleSection: "how work",
         titleMain: "The Most important",
         titleGradient: "services we provide",
         description: "With our integrated CRM, project management, collaborationand invoicing capabilities,  you can manageyour business in one secure platform.",
     }
 
+    let objectSection = [
+        {
+            id: "1",
+            title: "The Pervasive Threat",
+            description: "Hackers publish compromised devices stolen credentials in their exclusive market places at various platforms.",
+            classDirection: "left-timeline"
+        }, {
+            id: "2",
+            title: "The Pervasive Threat",
+            description: "Hackers publish compromised devices stolen credentials in their exclusive market places at various platforms.",
+            classDirection: "right-timeline"
+        }, {
+            id: "3",
+            title: "The Pervasive Threat",
+            description: "Hackers publish compromised devices stolen credentials in their exclusive market places at various platforms.",
+            classDirection: "left-timeline"
+        }, {
+            id: "4",
+            title: "The Pervasive Threat",
+            description: "Hackers publish compromised devices stolen credentials in their exclusive market places at various platforms.",
+            classDirection: "right-timeline"
+        }, {
+            id: "5",
+            title: "The Pervasive Threat",
+            description: "Hackers publish compromised devices stolen credentials in their exclusive market places at various platforms.",
+            classDirection: "left-timeline"
+        }, {
+            id: "6",
+            title: "The Pervasive Threat",
+            description: "Hackers publish compromised devices stolen credentials in their exclusive market places at various platforms.",
+            classDirection: "right-timeline"
+        },
+    ]
+
     return (
         <div>
-            <div class="container">
+            <div className="container container-scroll" id='how-work'>
 
-            <TitleSection TitleObject={TitleObject} />
+                <TitleSection TitleObject={TitleObject} />
 
-                <div class="timeline">
-                    <div class="container-timeline left-timeline " data-aos="fade-up" data-aos-duration="1000">
-                        <div class="content-timeline">
-                            <div class="counter" data-aos="fade-up" data-aos-duration="1100">1</div>
-                            <h2 data-aos="fade-up" data-aos-duration="1200">The Pervasive Threat</h2>
-                            <p data-aos="fade-up" data-aos-duration="1300">Millions of devices are compromised using
-                                info-stealers malware, via cracked software,
-                                torrent files and what not.</p>
-                        </div>
-                    </div>
-                    <div class="container-timeline right-timeline " data-aos="fade-up" data-aos-duration="1000">
-                        <div class="content-timeline">
-                            <div class="counter">2</div>
+                <div className="timeline">
 
-                            <h2>The Pervasive Threat</h2>
-                            <p>Hackers publish compromised devices stolen credentials in their exclusive market places at
-                                various platforms.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container-timeline left-timeline " data-aos="fade-up" data-aos-duration="1000">
-                        <div class="content-timeline">
-                            <div class="counter" data-aos="fade-up" data-aos-duration="1100">3</div>
-
-                            <h2 data-aos="fade-up" data-aos-duration="1200">The Pervasive Threat</h2>
-                            <p data-aos="fade-up" data-aos-duration="1300">We monitor the Darkweb marketplaces, hacking
-                                forums, private clouds, underground channels,
-                                Telegram, Discord and paste sites.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container-timeline right-timeline " data-aos="fade-up" data-aos-duration="1000">
-                        <div class="content-timeline">
-                            <div class="counter" data-aos="fade-up" data-aos-duration="1100">4</div>
-
-                            <h2 data-aos="fade-up" data-aos-duration="1200">The Pervasive Threat</h2>
-                            <p data-aos="fade-up" data-aos-duration="1300">Also using vulnerabilities we identified in
-                                various info-stealers Command-and-Control
-                                servers, we capture as much stolen data as possible.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container-timeline left-timeline " data-aos="fade-up" data-aos-duration="1000">
-                        <div class="content-timeline">
-                            <div class="counter" data-aos="fade-up" data-aos-duration="1100">5</div>
-
-                            <h2 data-aos="fade-up" data-aos-duration="1200">The Pervasive Threat</h2>
-                            <p data-aos="fade-up" data-aos-duration="1300">Filter, validate and classify all the collected
-                                data using our automated pipelines and feed
-                                it into the DarkEntry database.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container-timeline right-timeline " data-aos="fade-up" data-aos-duration="1000">
-                        <div class="content-timeline">
-                            <div class="counter" data-aos="fade-up" data-aos-duration="1100">6</div>
-
-                            <h2 data-aos="fade-up" data-aos-duration="1200">The Pervasive Threat</h2>
-                            <p data-aos="fade-up" data-aos-duration="1300">Deliver real-time alerts of data-leaks and
-                                breaches to our customers and assess them to
-                                eliminate the risk.
-
-                            </p>
-                        </div>
-                    </div>
+                    {
+                        objectSection.map((item) => {
+                            return (
+                                <Card key={item.id} data={item} />
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

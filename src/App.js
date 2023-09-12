@@ -1,12 +1,15 @@
 
 import './App.css';
-import Header from './page/Header';
+import Header from './components/Header';
 import HeroSection from './page/HeroSection';
 import ServicesSection from './page/services-section/ServicesSection';
 import CompanySection from './page/company-section/CompanySection';
 import HowWeWork from './page/how-we-work/HowWeWork';
 import Achievement from './page/achievement/Achievement';
-
+import Certificates from './page/certificates/Certificates';
+import WhyUs from './page/why-us/WhyUs';
+import ContactUs from './page/ContactUs';
+import Footer from './components/Footer';
 
 import { useEffect } from 'react';
 
@@ -32,6 +35,10 @@ function App() {
       <CompanySection/>
       <HowWeWork/>
       <Achievement/>
+      <Certificates/>
+      <WhyUs/>
+      <ContactUs/>
+      <Footer/>
     </div>
   );
 }

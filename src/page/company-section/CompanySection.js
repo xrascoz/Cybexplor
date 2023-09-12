@@ -19,7 +19,7 @@ function CompanySection() {
 
     return (
         <div>
-            <div className="container">
+            <div className="container container-scroll" id='company'>
                 <TitleSection TitleObject={TitleObject} />
                 <div className='grid-style-tow' >
                     <dvi className="explain-text" >

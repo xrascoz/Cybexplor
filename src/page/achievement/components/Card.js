@@ -3,17 +3,23 @@ import React from 'react'
 import icon from "../../../assets/icon/Shield Check.svg"
 
 
-function Card() {
-  return (
-    <div className='card'>
-      <div class="counter" data-aos="fade-up" data-aos-duration="1100"> <img src={icon} alt="img" className='icon' />
-      </div>
-      <div class="content-card">
+function Card({ data }) {
 
-        <h2 data-aos="fade-up" data-aos-duration="1200">The Pervasive Threat</h2>
-        <p data-aos="fade-up" data-aos-duration="1300">Millions of devices are compromised using
-          info-stealers malware, via cracked software,
-          torrent files and what not.</p>
+  let { img, title, description } = data
+
+
+
+
+  return (
+    <div className='card' data-aos="fade-up" data-aos-duration="1100"  >
+      <div className="counter" data-aos="fade-up" data-aos-duration="1100"> <img src={img} alt="img" className='icon' />
+      </div>
+      <div className="content-card">
+
+        <h2 data-aos="fade-up" data-aos-duration="1200">{title}</h2>
+        <p data-aos="fade-up" data-aos-duration="1300">
+          {description}
+        </p>
       </div>
     </div>
   )

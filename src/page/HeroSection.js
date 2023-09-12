@@ -17,13 +17,21 @@ function HeroSection() {
                             Intelligence.
                         </p>
                     </div>
-                    <button className='main-button'  data-aos="fade-up" data-aos-duration="1000">
+                    <a className='main-button' href="#contact-us" data-aos="fade-up" data-aos-duration="1000">
                         Contact Us
-                    </button>
+                    </a>
                 </div>
-
+                <a href='#services'>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/wtfdpwey.json"
+                        trigger="loop"
+                        colors="primary:#ffffff,secondary:#f05255"
+                        style={{ width: '120px', height: '250px' }}
+                    >
+                    </lord-icon>
+                </a>
             </div>
-            <img src={CirclePng} alt="earth.png" className="earth-img"  />
+            <img src={CirclePng} alt="earth.png" className="earth-img" />
 
         </main>
     )
